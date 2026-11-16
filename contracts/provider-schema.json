@@ -1,0 +1,1690 @@
+{
+  "data": {
+    "__schema": {
+      "types": [
+        {
+          "name": "Query",
+          "fields": [
+            {
+              "name": "self",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticQuerySelf"
+              },
+              "args": []
+            },
+            {
+              "name": "groupByUrlname",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticQueryGroupbyurlname"
+              },
+              "args": [
+                {
+                  "name": "urlname",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "proNetwork",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticQueryPronetwork"
+              },
+              "args": [
+                {
+                  "name": "urlname",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "event",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Event"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "ID"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "eventSearch",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticQueryEventsearch"
+              },
+              "args": [
+                {
+                  "name": "first",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int"
+                  }
+                },
+                {
+                  "name": "filter",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SyntheticQueryeventSearchFilterInput"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "suggestTopics",
+              "type": {
+                "kind": "OBJECT",
+                "name": "TopicsConnection"
+              },
+              "args": [
+                {
+                  "name": "query",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                },
+                {
+                  "name": "first",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int"
+                  }
+                },
+                {
+                  "name": "excludeMemberTopics",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Unobserved"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mutation",
+          "fields": [
+            {
+              "name": "createEvent",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticMutationCreateevent"
+              },
+              "args": [
+                {
+                  "name": "input",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CreateEventInput"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "editEvent",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticMutationEditevent"
+              },
+              "args": [
+                {
+                  "name": "input",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "EditEventInput"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "deleteEvent",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticMutationDeleteevent"
+              },
+              "args": [
+                {
+                  "name": "input",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "DeleteEventInput"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "createGroupEventPhoto",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticMutationCreategroupeventphoto"
+              },
+              "args": [
+                {
+                  "name": "input",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "GroupEventPhotoCreateInput"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Event",
+          "fields": [
+            {
+              "name": "topics",
+              "type": {
+                "kind": "OBJECT",
+                "name": "TopicsConnection"
+              },
+              "args": []
+            },
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "title",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "eventUrl",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "dateTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "endTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "duration",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "status",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "createdTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "group",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticEventGroup"
+              },
+              "args": []
+            },
+            {
+              "name": "venue",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticEventVenue"
+              },
+              "args": []
+            },
+            {
+              "name": "howToFindUs",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "description",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "networkEvent",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticEventNetworkevent"
+              },
+              "args": []
+            },
+            {
+              "name": "maxTickets",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "rsvpSettings",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticEventRsvpsettings"
+              },
+              "args": []
+            },
+            {
+              "name": "rsvpQuestions",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticEventRsvpquestions"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "rsvpSurveySettings",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticEventRsvpsurveysettings"
+              },
+              "args": []
+            },
+            {
+              "name": "featuredEventPhoto",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticEventFeaturedeventphoto"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TopicsConnection",
+          "fields": [
+            {
+              "name": "edges",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "TopicEdge"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TopicEdge",
+          "fields": [
+            {
+              "name": "node",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Topic"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "Topic",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "CreateEventInput",
+          "inputFields": [
+            {
+              "name": "groupUrlname",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "title",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "description",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "startDateTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "duration",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "venueId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "howToFindUs",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "publishStatus",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "question",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "rsvpSettings",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "RsvpSettings"
+              }
+            },
+            {
+              "name": "featuredPhotoId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "topics",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID"
+                }
+              }
+            },
+            {
+              "name": "proNetworkEvents",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "ProNetworkEventsInput"
+              }
+            }
+          ]
+        },
+        {
+          "name": "EditEventInput",
+          "inputFields": [
+            {
+              "name": "eventId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "title",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "description",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "startDateTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "duration",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "venueId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "howToFindUs",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "question",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "rsvpSettings",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "RsvpSettings"
+              }
+            },
+            {
+              "name": "rsvpSurvey",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "RsvpSurvey"
+              }
+            },
+            {
+              "name": "featuredPhotoId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "topics",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "DeleteEventInput",
+          "inputFields": [
+            {
+              "name": "eventId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "removeFromCalendar",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "updateSeries",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        },
+        {
+          "name": "GroupEventPhotoCreateInput",
+          "inputFields": [
+            {
+              "name": "groupId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "photoType",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "contentType",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "setAsMain",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RsvpSettings",
+          "inputFields": [
+            {
+              "name": "rsvpLimit",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "rsvpOpenTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RsvpSurvey",
+          "inputFields": [
+            {
+              "name": "enabled",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ProNetworkEventsInput",
+          "inputFields": [
+            {
+              "name": "fromEventId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "timezone",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQuerySelf",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQueryGroupbyurlname",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "urlname",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "lat",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "lon",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "events",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticQueryGroupbyurlnameEvents"
+              },
+              "args": [
+                {
+                  "name": "first",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int"
+                  }
+                },
+                {
+                  "name": "after",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                },
+                {
+                  "name": "sort",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Unobserved"
+                  }
+                },
+                {
+                  "name": "filter",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SyntheticQuerygroupByUrlnameeventsFilterInput"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "venues",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticQueryGroupbyurlnameVenues"
+              },
+              "args": [
+                {
+                  "name": "first",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "Int"
+                  }
+                },
+                {
+                  "name": "after",
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQueryPronetwork",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "eventsSearch",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticQueryPronetworkEventssearch"
+              },
+              "args": [
+                {
+                  "name": "input",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SyntheticQueryproNetworkeventsSearchInputInput"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "groupsSearch",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticQueryPronetworkGroupssearch"
+              },
+              "args": [
+                {
+                  "name": "input",
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "SyntheticQueryproNetworkgroupsSearchInputInput"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticQueryGroupbyurlnameEvents",
+          "fields": [
+            {
+              "name": "pageInfo",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameEventsPageinfo"
+              },
+              "args": []
+            },
+            {
+              "name": "edges",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameEventsEdges"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameEventsPageinfo",
+          "fields": [
+            {
+              "name": "endCursor",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "hasNextPage",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameEventsEdges",
+          "fields": [
+            {
+              "name": "node",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Event"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticSyntheticQueryGroupbyurlnameEventsEdgesNode",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticQueryGroupbyurlnameVenues",
+          "fields": [
+            {
+              "name": "pageInfo",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameVenuesPageinfo"
+              },
+              "args": []
+            },
+            {
+              "name": "edges",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameVenuesEdges"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameVenuesPageinfo",
+          "fields": [
+            {
+              "name": "endCursor",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "hasNextPage",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Boolean"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticQueryGroupbyurlnameVenuesEdges",
+          "fields": [
+            {
+              "name": "node",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticSyntheticSyntheticQueryGroupbyurlnameVenuesEdgesNode"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticSyntheticQueryGroupbyurlnameVenuesEdgesNode",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "address",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "city",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "state",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "postalCode",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticQueryPronetworkEventssearch",
+          "fields": [
+            {
+              "name": "edges",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticSyntheticQueryPronetworkEventssearchEdges"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticQueryPronetworkEventssearchEdges",
+          "fields": [
+            {
+              "name": "node",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Event"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticSyntheticQueryPronetworkEventssearchEdgesNode",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticQueryPronetworkGroupssearch",
+          "fields": [
+            {
+              "name": "edges",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticSyntheticQueryPronetworkGroupssearchEdges"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticQueryPronetworkGroupssearchEdges",
+          "fields": [
+            {
+              "name": "node",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticSyntheticSyntheticQueryPronetworkGroupssearchEdgesNode"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticSyntheticQueryPronetworkGroupssearchEdgesNode",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "urlname",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQueryEventsearch",
+          "fields": [
+            {
+              "name": "edges",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticQueryEventsearchEdges"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticQueryEventsearchEdges",
+          "fields": [
+            {
+              "name": "node",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticSyntheticQueryEventsearchEdgesNode"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticQueryEventsearchEdgesNode",
+          "fields": [
+            {
+              "name": "venue",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticSyntheticSyntheticQueryEventsearchEdgesNodeVenue"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticSyntheticSyntheticQueryEventsearchEdgesNodeVenue",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "address",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "city",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "state",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "postalCode",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticEventGroup",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "urlname",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticEventVenue",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "address",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticEventNetworkevent",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "groupCount",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticEventRsvpsettings",
+          "fields": [
+            {
+              "name": "rsvpOpenTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticEventRsvpquestions",
+          "fields": [
+            {
+              "name": "questionId",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "text",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticEventRsvpsurveysettings",
+          "fields": [
+            {
+              "name": "requiresProQuestionnaire",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticEventFeaturedeventphoto",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "baseUrl",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticMutationCreateevent",
+          "fields": [
+            {
+              "name": "errors",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticMutationCreateeventErrors"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "event",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Event"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticMutationCreateeventErrors",
+          "fields": [
+            {
+              "name": "message",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "code",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "field",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticMutationEditevent",
+          "fields": [
+            {
+              "name": "errors",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticMutationEditeventErrors"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "event",
+              "type": {
+                "kind": "OBJECT",
+                "name": "Event"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticMutationEditeventErrors",
+          "fields": [
+            {
+              "name": "message",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "code",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "field",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticMutationDeleteevent",
+          "fields": [
+            {
+              "name": "errors",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SyntheticSyntheticMutationDeleteeventErrors"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticMutationDeleteeventErrors",
+          "fields": [
+            {
+              "name": "message",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "code",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "field",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticMutationCreategroupeventphoto",
+          "fields": [
+            {
+              "name": "uploadUrl",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "photo",
+              "type": {
+                "kind": "OBJECT",
+                "name": "SyntheticSyntheticMutationCreategroupeventphotoPhoto"
+              },
+              "args": []
+            },
+            {
+              "name": "imagePath",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticSyntheticMutationCreategroupeventphotoPhoto",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            },
+            {
+              "name": "baseUrl",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQuerygroupByUrlnameeventsFilterInput",
+          "inputFields": [
+            {
+              "name": "afterDateTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime"
+              }
+            },
+            {
+              "name": "beforeDateTime",
+              "type": {
+                "kind": "SCALAR",
+                "name": "DateTime"
+              }
+            },
+            {
+              "name": "status",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "Unobserved"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQueryeventSearchFilterInput",
+          "inputFields": [
+            {
+              "name": "query",
+              "type": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            {
+              "name": "lat",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Float"
+              }
+            },
+            {
+              "name": "lon",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Float"
+              }
+            },
+            {
+              "name": "radius",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQueryproNetworkeventsSearchInputInput",
+          "inputFields": [
+            {
+              "name": "first",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            },
+            {
+              "name": "sort",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        },
+        {
+          "name": "SyntheticQueryproNetworkgroupsSearchInputInput",
+          "inputFields": [
+            {
+              "name": "first",
+              "type": {
+                "kind": "SCALAR",
+                "name": "Unobserved"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

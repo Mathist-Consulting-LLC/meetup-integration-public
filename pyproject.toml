@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathist-meetup-integration"
+version = "0.0.0.dev3"
+description = "Caller-injected Meetup Python provider and offline interfaces"
+readme = "README.md"
+license = "PolyForm-Small-Business-1.0.0"
+license-files = ["LICENSE.md", "NOTICE"]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+images = ["Pillow==13.0.0"]
+
+[tool.setuptools.packages.find]
+where = ["python/src"]

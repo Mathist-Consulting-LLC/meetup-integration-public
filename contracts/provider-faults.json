@@ -1,0 +1,17 @@
+{
+  "provenance": "synthetic issue6; not provider captures",
+  "cases": [
+    {"id": "http-auth", "status": 401, "body": "PRIVATE", "code": "authentication_failed"},
+    {"id": "http-permission", "status": 403, "body": "PRIVATE", "code": "permission_denied"},
+    {"id": "http-rate", "status": 429, "body": "PRIVATE", "code": "rate_limited"},
+    {"id": "graphql-auth", "status": 200, "body": {"errors": [{"message": "PRIVATE", "extensions": {"code": "UNAUTHENTICATED"}}]}, "code": "authentication_failed"},
+    {"id": "graphql-permission", "status": 200, "body": {"errors": [{"message": "PRIVATE", "extensions": {"code": "FORBIDDEN"}}]}, "code": "permission_denied"},
+    {"id": "graphql-rate", "status": 200, "body": {"errors": [{"message": "PRIVATE", "extensions": {"code": "RATE_LIMITED"}}]}, "code": "rate_limited"},
+    {"id": "schema", "status": 200, "body": {"errors": [{"message": "PRIVATE"}]}, "code": "schema_unsupported"},
+    {"id": "malformed-json", "status": 200, "body": "{PRIVATE", "code": "response_invalid"},
+    {"id": "missing-data", "status": 200, "body": {}, "code": "response_invalid"},
+    {"id": "partial-identity", "status": 200, "body": {"data": {"groupByUrlname": {"name": "PRIVATE", "urlname": "synthetic"}}}, "code": "response_invalid"},
+    {"id": "wrong-identity-type", "status": 200, "body": {"data": {"groupByUrlname": {"id": 42, "urlname": "synthetic"}}}, "code": "response_invalid"},
+    {"id": "transport-timeout", "throw": true, "code": "transport_unavailable"}
+  ]
+}

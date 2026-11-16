@@ -1,0 +1,10 @@
+{
+  "name": "@mathist/meetup-integration",
+  "version": "0.0.0-dev.3",
+  "private": true,
+  "license": "PolyForm-Small-Business-1.0.0",
+  "type": "module",
+  "engines": {"node": ">=20"},
+  "exports": "./src/index.js",
+  "files": ["NOTICE", "src", "README.md"]
+}

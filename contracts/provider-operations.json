@@ -1,0 +1,360 @@
+{
+  "provenance": "Generated request observations from accepted extracted operations using only injected synthetic replies; not provider captures. Source expressions are retained separately in docs/provider-operation-inventory.json.",
+  "create_request": {
+    "group_url_name": "synthetic",
+    "title": "Synthetic",
+    "description": "Synthetic description",
+    "start_date_time": "2026-12-01T10:00:00Z",
+    "duration": "PT1H",
+    "venue_id": "v",
+    "how_to_find_us": "",
+    "publish_status": "DRAFT"
+  },
+  "cases": [
+    {
+      "method": "verify_auth",
+      "args": [],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "self": {
+              "id": "member",
+              "name": "Synthetic"
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "query { self { id name } }"
+        }
+      ]
+    },
+    {
+      "method": "get_event",
+      "args": [
+        "e"
+      ],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "event": {
+              "id": "e"
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "query($id: ID!) { event(id: $id) { id title eventUrl dateTime endTime duration status group { urlname } venue { id name address } howToFindUs description networkEvent { id groupCount } maxTickets rsvpSettings { rsvpOpenTime } rsvpQuestions { questionId text } rsvpSurveySettings { requiresProQuestionnaire } featuredEventPhoto { id baseUrl } } }",
+          "variables": {
+            "id": "e"
+          }
+        }
+      ]
+    },
+    {
+      "method": "list_group_events",
+      "args": [
+        "synthetic"
+      ],
+      "kwargs": {
+        "after_date_time": "2026-12-01T00:00:00Z",
+        "before_date_time": "2026-12-31T00:00:00Z"
+      },
+      "responses": [
+        {
+          "data": {
+            "groupByUrlname": {
+              "id": "g",
+              "events": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "e"
+                    }
+                  }
+                ],
+                "pageInfo": {
+                  "hasNextPage": false,
+                  "endCursor": null
+                }
+              }
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "query($urlname: String!, $first: Int!, $after: String, $afterDateTime: DateTime!, $beforeDateTime: DateTime!) { groupByUrlname(urlname: $urlname) { id name urlname events(first: $first, after: $after, sort: ASC, filter: {afterDateTime: $afterDateTime, beforeDateTime: $beforeDateTime, status: [ACTIVE, CANCELLED, CANCELLED_PERM, AUTOSCHED_CANCELLED]}) { pageInfo { endCursor hasNextPage } edges { node { id title eventUrl dateTime endTime duration status createdTime group { id name urlname } venue { id name address } howToFindUs description maxTickets rsvpSettings { rsvpOpenTime } rsvpQuestions { questionId text } rsvpSurveySettings { requiresProQuestionnaire } featuredEventPhoto { id baseUrl } } } } } }",
+          "variables": {
+            "urlname": "synthetic",
+            "first": 50,
+            "after": null,
+            "afterDateTime": "2026-12-01T00:00:00Z",
+            "beforeDateTime": "2026-12-31T00:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "method": "list_network_events",
+      "args": [
+        "synthetic"
+      ],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "proNetwork": {
+              "eventsSearch": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "e"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "query { proNetwork(urlname: \"synthetic\") { eventsSearch(input: {first: 100, sort: \"DATETIME\"}) { edges { node { id title eventUrl dateTime endTime duration status group { urlname } venue { id name address } howToFindUs description networkEvent { id groupCount } maxTickets rsvpSettings { rsvpOpenTime } rsvpQuestions { questionId text } rsvpSurveySettings { requiresProQuestionnaire } featuredEventPhoto { id baseUrl } } } } } }"
+        }
+      ]
+    },
+    {
+      "method": "list_network_groups",
+      "args": [
+        "synthetic",
+        "n"
+      ],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "proNetwork": {
+              "id": "n",
+              "groupsSearch": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "g",
+                      "name": "Synthetic",
+                      "urlname": "synthetic"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "query { proNetwork(urlname: \"synthetic\") { id groupsSearch(input: {first: 100}) { edges { node { id urlname name } } } } }"
+        }
+      ]
+    },
+    {
+      "method": "search_venues",
+      "args": [
+        "synthetic",
+        ""
+      ],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "groupByUrlname": {
+              "venues": {
+                "edges": [
+                  {
+                    "node": {
+                      "id": "v",
+                      "name": "Synthetic"
+                    }
+                  }
+                ],
+                "pageInfo": {
+                  "hasNextPage": false,
+                  "endCursor": null
+                }
+              }
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "query($urlname: String!, $first: Int!, $after: String) { groupByUrlname(urlname: $urlname) { lat lon venues(first: $first, after: $after) { pageInfo { endCursor hasNextPage } edges { node { id name address city state postalCode } } } } }",
+          "variables": {
+            "urlname": "synthetic",
+            "first": 100,
+            "after": null
+          }
+        }
+      ]
+    },
+    {
+      "method": "create_event",
+      "args": [],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "createEvent": {
+              "event": {
+                "id": "e"
+              },
+              "errors": []
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "mutation($input: CreateEventInput!) { createEvent(input: $input) { event { id title eventUrl dateTime endTime duration status group { urlname } venue { id name address } howToFindUs description featuredEventPhoto { id baseUrl } } errors { message code field } } }",
+          "variables": {
+            "input": {
+              "groupUrlname": "synthetic",
+              "title": "Synthetic",
+              "description": "Synthetic description",
+              "startDateTime": "2026-12-01T10:00:00Z",
+              "duration": "PT1H",
+              "venueId": "v",
+              "howToFindUs": "",
+              "publishStatus": "DRAFT"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "method": "update_event",
+      "args": [
+        "e",
+        {
+          "title": "Changed",
+          "rsvp_limit": 0,
+          "rsvp_question": "",
+          "featured_photo_id": "p"
+        }
+      ],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "editEvent": {
+              "event": {
+                "id": "e"
+              },
+              "errors": []
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "mutation($input: EditEventInput!) { editEvent(input: $input) { event { id title eventUrl dateTime endTime duration status group { urlname } venue { id name address } howToFindUs description maxTickets rsvpSettings { rsvpOpenTime } rsvpQuestions { questionId text } rsvpSurveySettings { requiresProQuestionnaire } featuredEventPhoto { id baseUrl } } errors { message code field } } }",
+          "variables": {
+            "input": {
+              "eventId": "e",
+              "title": "Changed",
+              "rsvpSettings": {
+                "rsvpLimit": 0
+              },
+              "question": "",
+              "rsvpSurvey": {
+                "enabled": false
+              },
+              "featuredPhotoId": "p"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "method": "cancel_event",
+      "args": [
+        "e",
+        "Not sent"
+      ],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "deleteEvent": {
+              "errors": []
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "mutation($input: DeleteEventInput!) { deleteEvent(input: $input) { errors { message code field } } }",
+          "variables": {
+            "input": {
+              "eventId": "e",
+              "removeFromCalendar": false,
+              "updateSeries": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "method": "_create_group_event_photo_placeholder",
+      "args": [
+        "synthetic",
+        "image/jpeg"
+      ],
+      "kwargs": {},
+      "responses": [
+        {
+          "data": {
+            "groupByUrlname": {
+              "id": "g"
+            }
+          }
+        },
+        {
+          "data": {
+            "createGroupEventPhoto": {
+              "uploadUrl": "https://upload.example/synthetic",
+              "photo": {
+                "id": "p",
+                "baseUrl": "https://secure-content.meetupstatic.com/synthetic"
+              },
+              "imagePath": "synthetic"
+            }
+          }
+        }
+      ],
+      "requests": [
+        {
+          "query": "query($urlname: String!) { groupByUrlname(urlname: $urlname) { id } }",
+          "variables": {
+            "urlname": "synthetic"
+          }
+        },
+        {
+          "query": "mutation($input: GroupEventPhotoCreateInput!) { createGroupEventPhoto(input: $input) { uploadUrl photo { id baseUrl } imagePath } }",
+          "variables": {
+            "input": {
+              "groupId": "g",
+              "photoType": "GROUP_PHOTO",
+              "contentType": "JPEG",
+              "setAsMain": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "schema": "meetup-integration/offline-topic/1",
+  "valid": [{"id": "synthetic-1", "name": "Synthetic topic"}, {"id": "unicode-1", "name": "Learning 🧪"}],
+  "invalid": [null, [], {}, {"id": 1, "name": "Topic"}, {"id": "x", "name": " "}, {"id": " x", "name": "Topic"}, {"id": "x", "name": "Topic", "extra": true}]
+}

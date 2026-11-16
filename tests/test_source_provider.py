@@ -96,18 +96,18 @@ class PortedProviderTests(unittest.TestCase):
                     ]},
                 }}}
             return {'data': {'eventSearch': {'edges': [
-                {'node': {'venue': {'id': 'wings-venue', 'name': 'Wings Over the Rockies Air & Space Museum', 'address': '7711 E Academy Blvd', 'city': 'Denver', 'state': 'CO', 'postalCode': '80230'}}},
-                {'node': {'venue': {'id': 'wings-venue', 'name': 'Wings Over the Rockies Air & Space Museum', 'address': '7711 E Academy Blvd'}}},
+                {'node': {'venue': {'id': 'museum-venue', 'name': 'Example Aviation Museum', 'address': '10 Fixture Avenue', 'city': 'Denver', 'state': 'CO', 'postalCode': '80230'}}},
+                {'node': {'venue': {'id': 'museum-venue', 'name': 'Example Aviation Museum', 'address': '10 Fixture Avenue'}}},
             ]}}}
 
         with patch.object(client, '_graphql', side_effect=fake_graphql):
-            venues = client.search_venues('outsiders-village', 'Wings Over the Rockies Air & Space Museum')
+            venues = client.search_venues('example-group', 'Example Aviation Museum')
 
-        self.assertEqual([venue.id for venue in venues], ['group-venue', 'wings-venue'])
+        self.assertEqual([venue.id for venue in venues], ['group-venue', 'museum-venue'])
         self.assertEqual(venues[1].postal_code, '80230')
         self.assertIn('venues(first:', calls[0]['query'])
         self.assertIn('eventSearch', calls[1]['query'])
-        self.assertEqual(calls[1]['variables']['query'], 'Wings Over the Rockies Air & Space Museum')
+        self.assertEqual(calls[1]['variables']['query'], 'Example Aviation Museum')
         self.assertEqual(calls[1]['variables']['lat'], 39.72)
         self.assertEqual(calls[1]['variables']['lon'], -104.90)
 

@@ -1,6 +1,25 @@
 # Meetup Integration
 
-Caller-configured Python and JavaScript clients for Meetup operations. Applications supply authorization and transport.
+Connect Meetup to your own application so event information and event management can be part of a larger workflow. This library provides reusable Python clients and JavaScript helpers around selected Meetup operations.
+
+An event organizer could use the Python client to bring group events into a calendar, look up a venue, or create and update events from an application they already use. A developer could use the JavaScript helpers to resolve a group or search and validate event topics.
+
+## Why use it?
+
+Meetup provides the event platform and API. This library supplies reusable request handling, response models, topic validation, and error handling for the supported operations. It also reports an uncertain write when a request may have succeeded but its response was lost. Your application can then check the original event before deciding whether to retry.
+
+Using the Meetup website works well for managing events manually. This library is useful when you want your own software to work with those events, such as a calendar, organizer dashboard, or event import tool.
+
+## What access does it provide?
+
+| Package | Supported areas |
+| --- | --- |
+| Python | Read group and network events, retrieve an event, search venues, create and update events, cancel events, and work with event topics and images through the implemented client methods. |
+| JavaScript | Group resolution, topic search and validation, token-response normalization, and an injectable GraphQL transport boundary. |
+
+The packages expose different capabilities. Provider permissions and current API support determine which operations an authorized account can use. Your application supplies the access token and HTTP transport, manages credential refresh and storage, and decides when an operation is allowed.
+
+For example, a calendar application can read a group's events for a date window and use the returned identities to reconcile its calendar entries. When creating an event, it retains its local attempt and checks the remote result if the response is lost. The [offline uncertain-write example](examples/uncertain_write.py) demonstrates that failure case with a synthetic transport.
 
 ## Install from source
 

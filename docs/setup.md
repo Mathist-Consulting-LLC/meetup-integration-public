@@ -65,3 +65,19 @@ and validates JPEG or normalizes supported PNG/WebP/GIF to JPEG.
 Image requests never carry the provider bearer token. Placeholder creation and
 PUT/readback are effects; failed upload/readback can be uncertain. Readiness via
 `supports_event_images` alone proves no live capability or authorization.
+
+After placeholder creation and PUT, upload performs up to five one-byte range
+readbacks of the resulting photo. The first is immediate; before the remaining
+attempts it calls the injected `sleep` with 1, 2, 4 and 8 seconds (15 seconds in
+total if the callback actually waits). It stops on the first readable image.
+Readback failure after placeholder/upload raises `mutation_uncertain`; the photo
+may already exist, so reconcile independently before another upload. These are
+readback polls, not repeated PUTs.
+
+Budget for the initial image GET, placeholder GraphQL creation, one PUT and up
+to five readbacks, DNS resolution and normalization, plus those sleeps. Each
+readback ImageRequest advertises a 15-second timeout and one-byte limit (initial
+GET/PUT advertise 30 seconds); callbacks must enforce them. Five full readback
+allowances plus sleeps alone can take 90 seconds, before initial work. There is
+no enforced overall Python deadline; callback delays and GraphQL work add to
+the caller's total time/request budget.

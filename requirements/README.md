@@ -11,9 +11,10 @@ Historical IDs and revisions are preserved. The [public provenance map](provenan
 identifies protected original catalog digests and publication qualifications. Public issue [#7](https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7)
 routes restoration of the sanitized records; it does not retroactively approve
 them. Maintainers retain original catalogs, original sources, approval records,
-revision digests and task evidence in protected storage. Historical source
-pointers and named deployment references are redacted, including in change
-records. No test or historical acceptance criterion is waived by publication.
+revision digests and task evidence in protected storage. Historical source pointers, including change authorization, use explicit
+`protected-original:sha256:` identifiers resolved in provenance.json. Authority
+and decision dates remain original; publication issues are routing context only.
+Named deployment references are protected. No test or historical acceptance criterion is waived by publication.
 Live compatibility, composed application adoption and independent review require
 separate evidence. New organization and documentation obligations come from
 [#7](https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7) and [#6](https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/6), with separately authorized implementation.

@@ -8,7 +8,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -39,7 +39,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -74,7 +74,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -109,7 +109,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -144,7 +144,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -175,7 +175,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -206,7 +206,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -241,7 +241,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -276,7 +276,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -311,7 +311,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -346,7 +346,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -381,7 +381,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -416,7 +416,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
@@ -451,7 +451,7 @@
       "kind": "mandatory",
       "lifecycle": "accepted",
       "source": {
-        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "pointer": "protected-original:sha256:f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
         "authority": "explicit-user",
         "date": "2026-11-08"
       },

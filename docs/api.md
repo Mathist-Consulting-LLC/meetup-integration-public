@@ -24,8 +24,12 @@ These are offline contracts, not a snapshot of today's live provider.
 | `validate_event_topics(selections)` | tuple of canonical IDs, exact fresh name/ID checks, max five |
 | `get_event_topic_ids(event_id)` | tuple of IDs, exact event binding |
 | `supports_event_images()` | local dependency/callback readiness, not provider authorization |
-| `upload_event_image_from_url(slug, image_url)` | uploaded photo ID after validation/upload/readback; may mutate |
+| `upload_event_image_from_url(slug, image_url)` | uploaded photo ID after validation/placeholder/PUT and up to five one-byte readbacks; may mutate |
 | `event_image_is_readable(event_id, photo_id)` | bool, checks exact event photo and image readback |
+
+Image upload polls immediately, then after injected sleeps of 1/2/4/8 seconds;
+failed readback after placeholder/upload is `mutation_uncertain`. Include polls
+and sleeps in the caller time/request budget; see [image lifecycle](setup.md#images-python-only).
 
 `MeetupEvent` and `MeetupVenue` are frozen provider projections, not application
 models. The [record fields](python-api.md) preserve names, defaults and optional

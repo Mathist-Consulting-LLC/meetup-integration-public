@@ -1,5 +1,5 @@
 {
-  "publication_note": "Sanitized source-backed projection. Historical IDs/revisions/criteria are retained; original source pointers, approvals and unredacted catalogs are protected. Historical acceptance is not a claim that all criteria are currently proven. New documentation records cite public issues plus separately retained implementation authorization.",
+  "publication_note": "Sanitized source-backed projection. Historical IDs/revisions/criteria are retained; original source pointers, approvals and unredacted catalogs are protected. Historical acceptance is not a claim that all criteria are currently proven. New documentation records cite public issues plus separately retained implementation authorization. Internal task-owner labels and evidence-store names are protected; original owner and exact retention location remain with the original records.",
   "records": [
     {
       "id": "MI4-BOUNDARY",

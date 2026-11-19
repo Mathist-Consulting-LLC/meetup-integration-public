@@ -245,7 +245,7 @@
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
-      "owner": "parent meetup-js-extraction-20261108 coordinator",
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
       "scope": "repository",
       "applicability": [
         "issue5"
@@ -280,7 +280,7 @@
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
-      "owner": "parent meetup-js-extraction-20261108 coordinator",
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
       "scope": "repository",
       "applicability": [
         "issue5"
@@ -315,7 +315,7 @@
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
-      "owner": "parent meetup-js-extraction-20261108 coordinator",
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
       "scope": "repository",
       "applicability": [
         "issue5"
@@ -350,7 +350,7 @@
         "authority": "explicit-user",
         "date": "2026-11-08"
       },
-      "owner": "parent meetup-js-extraction-20261108 coordinator",
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
       "scope": "repository",
       "applicability": [
         "issue5"
@@ -360,7 +360,7 @@
       "acceptance": [
         {
           "id": "AC1",
-          "statement": "Original issue4 records remain unchanged; source/candidate digests, original-base whitespace including new files, commands/results and remaining coverage are retained under meetup-js-extraction-20261108."
+          "statement": "Original issue4 records remain unchanged; source/candidate digests, original-base whitespace including new files, commands/results and remaining coverage are retained in the protected historical evidence store."
         },
         {
           "id": "AC2",

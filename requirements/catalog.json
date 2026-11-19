@@ -1,0 +1,567 @@
+{
+  "schema_version": 2,
+  "requirements": [
+    {
+      "id": "MI4-BOUNDARY",
+      "revision": 1,
+      "statement": "Extract the used provider operations with injected tokens/transports and no application imports, default network clients or refresh ownership.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent Codex coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue4"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Provider operations use only caller-supplied token and transports; application models, refresh ownership and policy remain source-owned."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Extraction or a passing summary silently loses an original task constraint.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "The Python package handles Meetup requests with the credentials and connection the app supplies.",
+      "positive_example": "A calendar worker checks publishing eligibility and supplies a token source and transport to the client."
+    },
+    {
+      "id": "MI4-SHAPES",
+      "revision": 1,
+      "statement": "Preserve source provider request shapes and bounded pagination/topic verification.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent Codex coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue4"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Source GraphQL queries/payload mappings and listing limits are retained."
+        },
+        {
+          "id": "AC2",
+          "statement": "Malformed connections, cursor loops/page budgets and unverified or stale topic identities fail closed."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Extraction or a passing summary silently loses an original task constraint.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Keep the request formats and limits the supported operations rely on.",
+      "positive_example": "An offline fixture checks the exact group-events request and verifies that pagination stops at the configured bound."
+    },
+    {
+      "id": "MI4-ERRORS",
+      "revision": 1,
+      "statement": "Expose fixed redacted errors and accurate uncertain write outcomes without automatic mutation retries.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent Codex coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue4"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Public provider/image errors never expose provider URL/error text or underlying exceptions."
+        },
+        {
+          "id": "AC2",
+          "statement": "Missing/mismatched identity, malformed write reply and post-submit failure retain uncertainty and do not trigger automatic write replay."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Extraction or a passing summary silently loses an original task constraint.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Report errors without exposing provider details. Preserve uncertainty when a write may have succeeded.",
+      "positive_example": "A simulated event creation times out after sending. The client reports an uncertain result with a fixed error and sends no second creation request."
+    },
+    {
+      "id": "MI4-IMAGES",
+      "revision": 1,
+      "statement": "Preserve image URL/DNS/redirect/private-address/byte/MIME/pixel safety and keep provider bearer tokens out of image requests.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent Codex coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue4"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Image boundary validates addresses/URLs/responses and decodes bounded images; documents mandatory caller pinning, TLS and resource obligations."
+        },
+        {
+          "id": "AC2",
+          "statement": "Image download, PUT and readback receive no provider bearer token."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Extraction or a passing summary silently loses an original task constraint.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Limit where images can come from and what the client accepts. Keep Meetup credentials off image requests.",
+      "positive_example": "A synthetic image test accepts an allowed image within size limits and verifies that the request carries no Meetup bearer token."
+    },
+    {
+      "id": "MI4-PACKAGE",
+      "revision": 1,
+      "statement": "Keep image decoding optional with justified exact provenance and clean-consumer acceptance.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent Codex coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue4"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Core installs/imports without Pillow; new isolated image consumers use the exact verified Pillow wheel and execute critical image tests."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Extraction or a passing summary silently loses an original task constraint.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Make image decoding an optional, traceable dependency.",
+      "positive_example": "A clean core install runs the non-image examples. A separate image-enabled install verifies the pinned decoder and runs an image fixture."
+    },
+    {
+      "id": "MI4-DOCS",
+      "revision": 1,
+      "statement": "Update exports and support/operation coverage claims truthfully.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent Codex coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue4"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Documentation accurately describes the implemented API, omitted application behavior and remaining acceptance limits."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Extraction or a passing summary silently loses an original task constraint.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Tell readers which operations and exports they can rely on.",
+      "positive_example": "The operation table lists supported event creation and identifies a provider operation outside the package\u2019s coverage."
+    },
+    {
+      "id": "MI4-VALIDATION",
+      "revision": 1,
+      "statement": "Run the required offline acceptance and whitespace validation without altering reviewed source or refs.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent Codex coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue4"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Both supplied acceptance paths and the exact base-to-head whitespace check pass."
+        },
+        {
+          "id": "AC2",
+          "statement": "Reviewed head and source checkout remain unchanged; previous attempts and accounting are preserved."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Extraction or a passing summary silently loses an original task constraint.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Verify the package offline and keep the reviewed source and refs intact.",
+      "positive_example": "A reviewer runs the prescribed offline checks and confirms the reviewed commit and working tree are unchanged."
+    },
+    {
+      "id": "MI5-BOUNDARY",
+      "revision": 1,
+      "statement": "Extract used JavaScript group/topic mechanics and pure OAuth normalization with injected fetch, token supplier and clock; preserve a single caller-owned refresh owner or broker.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
+      "scope": "repository",
+      "applicability": [
+        "issue5"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Group resolver and topic provider preserve source query shapes, canonical catalog validation and unsupported/stale capability behavior without recommendation, private-event, ranking or template policy."
+        },
+        {
+          "id": "AC2",
+          "statement": "Core has no default network, refresh owner, broker route, database or encryption; concurrent operations remain compatible with the existing source broker supplier and single owner."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "An extraction introduces a second refresh owner, leaks provider diagnostics or claims completion without current independent evidence.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "The JavaScript package performs lookups and interprets OAuth responses. The app retains token rotation.",
+      "positive_example": "A topic lookup uses a caller-supplied fetch function and token supplier. The app\u2019s broker remains the sole refresh owner."
+    },
+    {
+      "id": "MI5-SAFETY",
+      "revision": 1,
+      "statement": "Fail closed with fixed redacted categorized errors and bounded time/resource behavior without implicit retries.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
+      "scope": "repository",
+      "applicability": [
+        "issue5"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Authentication, permission, rate-limit, transport, schema and malformed/partial response failures are distinct and disclose no provider bodies, tokens or exception causes."
+        },
+        {
+          "id": "AC2",
+          "statement": "Injected deadline/cancellation and byte bounds clean up resources and retain uncertainty about caller-owned rotation; single-page topic prefixes are never claimed complete."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "An extraction introduces a second refresh owner, leaks provider diagnostics or claims completion without current independent evidence.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Report failures in fixed categories without exposing provider details. Respect time, cancellation and size limits. Preserve uncertainty if caller-owned token rotation may have happened. Label partial results as partial.",
+      "positive_example": "A synthetic lookup is cancelled before its response completes. The client stops reading, releases resources and reports a fixed error without provider text or a retry."
+    },
+    {
+      "id": "MI5-PACKAGE",
+      "revision": 1,
+      "statement": "Preserve prior Python contracts/tests and prove clean installed npm provider consumption using synthetic fixtures.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
+      "scope": "repository",
+      "applicability": [
+        "issue5"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Targeted JavaScript negatives and meaningful source-backed query/capability/canonicalization/OAuth/broker regressions execute."
+        },
+        {
+          "id": "AC2",
+          "statement": "Core and image-enabled wheel/sdist acceptance and installed npm provider tests pass outside source cwd without publishing or changing Python source/tests."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "An extraction introduces a second refresh owner, leaks provider diagnostics or claims completion without current independent evidence.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Verify the installed JavaScript package while preserving the earlier Python contracts.",
+      "positive_example": "A clean consumer imports the npm artifact and runs a synthetic lookup, alongside the existing Python regression suite."
+    },
+    {
+      "id": "MI5-EVIDENCE",
+      "revision": 1,
+      "statement": "Retain baseline/provenance, document exact operation boundaries and run baseline-bound validation; independent final review remains mandatory.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "Mathist Consulting LLC maintainers (historical review owner protected)",
+      "scope": "repository",
+      "applicability": [
+        "issue5"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Original issue4 records remain unchanged; source/candidate digests, original-base whitespace including new files, commands/results and remaining coverage are retained in the protected historical evidence store."
+        },
+        {
+          "id": "AC2",
+          "statement": "A separate independent reviewer inspects the final candidate and original acceptance before readiness or merge."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "An extraction introduces a second refresh owner, leaks provider diagnostics or claims completion without current independent evidence.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Keep the original scope, baseline and test results. Have a separate reviewer compare the final candidate with the original acceptance criteria before it is ready.",
+      "positive_example": "The implementer records the tested commit and baseline. A separate reviewer reads the original issue and checks that exact candidate before the PR is marked ready."
+    },
+    {
+      "id": "MI6-CONTRACT",
+      "revision": 1,
+      "statement": "Build deterministic shared provider/schema/fault contracts around actually used operations, preserving source facts and explicit coverage limits.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent meetup-contracts-20261108 coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue6"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Inventory consumed fields, arguments, types, pagination and exact mutation request/response shapes; reject meaningful removed/wrong schema contracts and incomplete identities."
+        },
+        {
+          "id": "AC2",
+          "statement": "Shared fixtures execute HTTP/auth/permission/rate-limit/malformed cases through both installed runtimes without unused SDK parity."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Synthetic-only validation is misrepresented as live compatibility or implementer checks as independent approval.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Test the provider shapes and failures the packages actually depend on.",
+      "positive_example": "A generated schema removes a field a supported lookup consumes. The offline checker reports the affected contract as unsupported."
+    },
+    {
+      "id": "MI6-SAFETY",
+      "revision": 1,
+      "statement": "Provide a read-only offline contract-check command with caller snapshots, redacted failures and no implicit network, mutation or rotating refresh retries.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent meetup-contracts-20261108 coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue6"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Deterministic default and caller snapshot checks never discover credentials or invoke providers; future credentialed execution needs separate authorization."
+        },
+        {
+          "id": "AC2",
+          "statement": "Distinguish failures before submission from uncertain outcomes after possibly successful writes; token normalization grants no retry authority."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Synthetic-only validation is misrepresented as live compatibility or implementer checks as independent approval.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Check saved schemas offline without credentials or provider calls. Keep failures before submission distinct from uncertain results after sending. Interpreting a token response gives no permission to retry.",
+      "positive_example": "The offline checker reads a saved schema without network access. In a separate synthetic write test, a timeout after sending leaves the result uncertain and the client sends no second request."
+    },
+    {
+      "id": "MI6-VALIDATION",
+      "revision": 1,
+      "statement": "Preserve existing contracts, original catalogs and source evidence and validate installed artifacts with independent review pending.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "protected-original:sha256:f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
+        "authority": "explicit-user",
+        "date": "2026-11-08"
+      },
+      "owner": "parent meetup-contracts-20261108 coordinator",
+      "scope": "repository",
+      "applicability": [
+        "issue6"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Targeted negatives, core/image wheel and rebuilt-sdist/npm checks, whitespace and both baseline-bound requirements checker attempts are retained with exact candidate digest."
+        },
+        {
+          "id": "AC2",
+          "statement": "Parent-arranged independent final review of original acceptance and exact candidate is required before readiness or merge."
+        }
+      ],
+      "rationale": "Preserve the source-backed historical contract. Original sources, approvals, baseline snapshots and revision history are protected; publication and fixture results do not establish live acceptance.",
+      "failure_example": "Synthetic-only validation is misrepresented as live compatibility or implementer checks as independent approval.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Keep earlier contracts and verify that the built artifacts behave as reviewed.",
+      "positive_example": "An independent reviewer checks the retained catalogs and runs the same synthetic contract cases against the installed artifacts."
+    },
+    {
+      "id": "EVENT-ORGANIZATION",
+      "revision": 1,
+      "statement": "Organize Event Integrations around the existing component while preserving package identities, imports, behavior, licenses and independent use. Publish self-contained component ownership and source-backed requirements. Coordinate repository mapping without adding providers or application features.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7",
+        "authority": "explicit-user",
+        "date": "2026-11-18"
+      },
+      "owner": "meetup-integration-public",
+      "scope": "repository",
+      "applicability": [
+        "documentation",
+        "organization"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Explain repository purpose, component map, retained layout, expansion boundaries and relocation impact using current repository names."
+        },
+        {
+          "id": "AC2",
+          "statement": "Retain historical requirement IDs, revisions and acceptance semantics, with public-safe provenance and protected original baselines and approvals."
+        },
+        {
+          "id": "AC3",
+          "statement": "Supply public agent guidance and component ownership; preserve runtime code and existing safety tests; verify fresh installed consumers."
+        }
+      ],
+      "rationale": "Explicitly authorized documentation and organization of existing functionality.",
+      "failure_example": "A consumer needs private context or assumes an unavailable capability is implemented.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "Event Integrations contains the component that works today; its package names stay stable.",
+      "positive_example": "A new caller installs the existing package and finds its component charter without private documentation."
+    },
+    {
+      "id": "EVENT-DEVELOPER-DOCS",
+      "revision": 1,
+      "statement": "Provide complete public developer documentation of existing behavior, including installation, API contracts, caller configuration, authorization, transports, pagination, failures, recovery, lifecycle, extension and validation. Keep private data out; distribute through GitHub source/local builds only.",
+      "kind": "mandatory",
+      "lifecycle": "accepted",
+      "source": {
+        "pointer": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/6",
+        "authority": "explicit-user",
+        "date": "2026-11-18"
+      },
+      "owner": "meetup-integration-public",
+      "scope": "repository",
+      "applicability": [
+        "documentation",
+        "organization"
+      ],
+      "dependencies": [],
+      "supersedes": [],
+      "acceptance": [
+        {
+          "id": "AC1",
+          "statement": "Provide a linked docs index and reading order, minimal and realistic runnable examples, exact offline expected output and supported runtime/language differences."
+        },
+        {
+          "id": "AC2",
+          "statement": "Verify documented signatures, imports, parameters, returns, error codes, limits and recovery against current source; document caller-owned live prerequisites without live writes or mail access."
+        },
+        {
+          "id": "AC3",
+          "statement": "Follow the public setup from a fresh checkout into a separate installed consumer; record validation and distinguish synthetic results from unobserved live behavior."
+        },
+        {
+          "id": "AC4",
+          "statement": "Document component-specific operations and extension boundaries required by the linked public documentation issue; preserve all accepted safety cases."
+        }
+      ],
+      "rationale": "Explicitly authorized documentation and organization of existing functionality.",
+      "failure_example": "A consumer needs private context or assumes an unavailable capability is implemented.",
+      "assertions": [],
+      "changes": [],
+      "plain_language": "A developer can install the library and integrate it using public instructions and credential-free examples.",
+      "positive_example": "A separate consumer installs a locally built artifact, runs an offline success and failure path, and understands which responsibilities remain with the caller."
+    }
+  ]
+}

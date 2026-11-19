@@ -1,0 +1,266 @@
+{
+  "publication_note": "Sanitized source-backed projection. Historical IDs/revisions/criteria are retained; original source pointers, approvals and unredacted catalogs are protected. Historical acceptance is not a claim that all criteria are currently proven. New documentation records cite public issues plus separately retained implementation authorization. Internal task-owner labels and evidence-store names are protected; original owner and exact retention location remain with the original records.",
+  "records": [
+    {
+      "id": "MI4-BOUNDARY",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI4-BOUNDARY",
+        "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI4-SHAPES",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI4-SHAPES",
+        "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI4-ERRORS",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI4-ERRORS",
+        "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI4-IMAGES",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI4-IMAGES",
+        "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI4-PACKAGE",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI4-PACKAGE",
+        "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI4-DOCS",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI4-DOCS",
+        "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI4-VALIDATION",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI4-VALIDATION",
+        "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI5-BOUNDARY",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI5-BOUNDARY",
+        "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI5-SAFETY",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI5-SAFETY",
+        "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI5-PACKAGE",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI5-PACKAGE",
+        "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI5-EVIDENCE",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI5-EVIDENCE",
+        "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI6-CONTRACT",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI6-CONTRACT",
+        "catalog_sha256": "b1a17e7a02252e2ab3ed43bc5bfdf81e912c323a661bd3d9a8ac354c1630e681",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI6-SAFETY",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI6-SAFETY",
+        "catalog_sha256": "b1a17e7a02252e2ab3ed43bc5bfdf81e912c323a661bd3d9a8ac354c1630e681",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "MI6-VALIDATION",
+      "revision": 1,
+      "historical_provenance": {
+        "visibility": "protected",
+        "record": "MI6-VALIDATION",
+        "catalog_sha256": "b1a17e7a02252e2ab3ed43bc5bfdf81e912c323a661bd3d9a8ac354c1630e681",
+        "note": "Original authority/date and exact originals are protected. Publication routing is context only and grants no historical approval."
+      },
+      "publication_routing": "https://github.com/Mathist-Consulting-LLC/meetup-integration-public/issues/7"
+    },
+    {
+      "id": "EVENT-ORGANIZATION",
+      "revision": 1,
+      "authorization_note": "Issue defines scope; implementation separately authorized by maintainer. Original instruction retained in protected task evidence."
+    },
+    {
+      "id": "EVENT-DEVELOPER-DOCS",
+      "revision": 1,
+      "authorization_note": "Issue defines scope; implementation separately authorized by maintainer. Original instruction retained in protected task evidence."
+    }
+  ],
+  "protected_originals": [
+    {
+      "identifier": "protected-original:sha256:c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+      "visibility": "protected",
+      "kind": "original-source",
+      "sha256": "c8125285f498598450497c83f3e9d03ce277c2e6b16105319f71fe9170b6b3d7",
+      "bindings": [
+        {
+          "record": "MI4-BOUNDARY",
+          "location": "source",
+          "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496"
+        },
+        {
+          "record": "MI4-SHAPES",
+          "location": "source",
+          "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496"
+        },
+        {
+          "record": "MI4-ERRORS",
+          "location": "source",
+          "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496"
+        },
+        {
+          "record": "MI4-IMAGES",
+          "location": "source",
+          "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496"
+        },
+        {
+          "record": "MI4-PACKAGE",
+          "location": "source",
+          "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496"
+        },
+        {
+          "record": "MI4-DOCS",
+          "location": "source",
+          "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496"
+        },
+        {
+          "record": "MI4-VALIDATION",
+          "location": "source",
+          "catalog_sha256": "7c182bf0bbc67c108ab2252a48fcc67eaf4daba971130cbd69bfab00e2a0f496"
+        }
+      ]
+    },
+    {
+      "identifier": "protected-original:sha256:7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
+      "visibility": "protected",
+      "kind": "original-source",
+      "sha256": "7915fa5d6512c8000cb339a9c0aa1fc9b9c28a2183b22ff19e72df6a84bebca4",
+      "bindings": [
+        {
+          "record": "MI5-BOUNDARY",
+          "location": "source",
+          "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6"
+        },
+        {
+          "record": "MI5-SAFETY",
+          "location": "source",
+          "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6"
+        },
+        {
+          "record": "MI5-PACKAGE",
+          "location": "source",
+          "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6"
+        },
+        {
+          "record": "MI5-EVIDENCE",
+          "location": "source",
+          "catalog_sha256": "d9603f9aea0e7f5601314d08799713449a9dcea052a9deb4b1d7629e7c8ef5e6"
+        }
+      ]
+    },
+    {
+      "identifier": "protected-original:sha256:f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
+      "visibility": "protected",
+      "kind": "original-source",
+      "sha256": "f5115f97a14460e1aa85ce36d3a1286b02e2995b51194a583a8bbed9d1c2d1bc",
+      "bindings": [
+        {
+          "record": "MI6-CONTRACT",
+          "location": "source",
+          "catalog_sha256": "b1a17e7a02252e2ab3ed43bc5bfdf81e912c323a661bd3d9a8ac354c1630e681"
+        },
+        {
+          "record": "MI6-SAFETY",
+          "location": "source",
+          "catalog_sha256": "b1a17e7a02252e2ab3ed43bc5bfdf81e912c323a661bd3d9a8ac354c1630e681"
+        },
+        {
+          "record": "MI6-VALIDATION",
+          "location": "source",
+          "catalog_sha256": "b1a17e7a02252e2ab3ed43bc5bfdf81e912c323a661bd3d9a8ac354c1630e681"
+        }
+      ]
+    }
+  ],
+  "digest_policy": "SHA256 of UTF-8 JSON with sorted keys, compact separators and ASCII escapes for original source/acceptance objects; catalog_sha256 hashes original file bytes. Identifiers resolve here to protected original bindings, not to publication issues. Maintainers retain exact originals privately."
+}

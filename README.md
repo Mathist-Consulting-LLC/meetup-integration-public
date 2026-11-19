@@ -1,4 +1,8 @@
-# Meetup Integration
+# Event Integrations
+
+The existing Meetup integration is the current component. Python clients and JavaScript helpers keep their existing package names.
+
+Start with the [developer guide](docs/README.md) for installation, runnable offline examples and API contracts. See the [component map](docs/component-charter.md) and [requirements](requirements/README.md).
 
 Connect Meetup to your own application so event information and event management can be part of a larger workflow. This library provides reusable Python clients and JavaScript helpers around selected Meetup operations.
 

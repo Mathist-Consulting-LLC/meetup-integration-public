@@ -4,8 +4,7 @@ Use Python 3.11+ with pip/venv and Git plus Node.js 20+ and npm.
 The provisioning interpreter needs pip 22.3+ (`--python` support); it installs
 into isolated venvs even on systems without ensurepip.
 Commands below use a POSIX shell; on Windows use the venv's Scripts/python.exe
-and equivalent copy/path commands. Python needs IANA timezone data for booking;
-Linux/macOS normally supply it, while other consumers may install tzdata.
+and equivalent copy/path commands.
 The recorded validation platform is described in [validation](validation.md).
 
 Run in a new work directory. Resolve main once, record its full Git SHA, and use
